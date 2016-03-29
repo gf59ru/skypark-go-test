@@ -11,10 +11,15 @@ import (
 	//"github.com/jinzhu/gorm"
 )
 
+type aa struct {
+	name string
+}
+
 func welcome(c web.C, w http.ResponseWriter, r *http.Request) {
 	t := template.New("welcome")
 	t, _ = t.ParseFiles("views/welcome.html")
-	t.Execute(w, "qwe")
+	a := aa {name: "qwe"}
+	t.Execute(w, a)
 }
 
 func hello(c web.C, w http.ResponseWriter, r *http.Request) {
