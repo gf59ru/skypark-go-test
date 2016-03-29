@@ -13,8 +13,8 @@ import (
 
 func welcome(c web.C, w http.ResponseWriter, r *http.Request) {
 	t := template.New("welcome")
-	t, _ = t.ParseFiles("views/welcome.html", "")
-	t.Execute(w, "")
+	t, _ = t.ParseFiles("views/welcome.html")
+	t.Execute(w, "qwe")
 }
 
 func hello(c web.C, w http.ResponseWriter, r *http.Request) {
